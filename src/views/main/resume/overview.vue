@@ -1,9 +1,38 @@
 <template>
-  <div class="components-container">
-    <pan-thumb :image="image"/>
+  <div class="resume-container">
+    <el-row>
+      <pan-thumb :image="image"/>
 
-    <el-button type="primary" icon="upload" style="position: absolute;bottom: 15px;margin-left: 40px;" @click="imagecropperShow=true">Change Avatar
-    </el-button>
+      <el-button type="primary" icon="upload" style="position: absolute;bottom: 15px;margin-left: 40px;" @click="imagecropperShow=true">Change Avatar
+      </el-button>
+    </el-row>
+
+    <el-row>
+      <label class="radio-label" style="padding-left:0;">First Name : </label>
+      <el-input
+        v-model="firstName"
+        placeholder="First Name"
+        style="width:340px;"
+        prefix-icon="el-icon-user"/>
+    </el-row>
+
+    <el-row>
+      <label class="radio-label" style="padding-left:0;">Last Name : </label>
+      <el-input
+        v-model="firstName"
+        placeholder="Last Name"
+        style="width:340px;"
+        prefix-icon="el-icon-user"/>
+    </el-row>
+
+    <el-row>
+      <label class="radio-label" style="padding-left:0;">Title : </label>
+      <el-input
+        v-model="firstName"
+        placeholder="Full Stack Developer"
+        style="width:340px;"
+        prefix-icon="el-icon-user"/>
+    </el-row>
 
     <image-cropper
       v-show="imagecropperShow"
@@ -45,6 +74,9 @@ export default {
 </script>
 
 <style scoped>
+  .resume-container {
+
+  }
   .avatar{
     width: 200px;
     height: 200px;
